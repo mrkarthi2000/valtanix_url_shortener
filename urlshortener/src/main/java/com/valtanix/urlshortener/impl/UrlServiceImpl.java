@@ -24,7 +24,8 @@ public class UrlServiceImpl implements UrlService {
     }
 
     private static String hash(String longUrl) {
-        int hashCode = longUrl.hashCode()+1;
+        String num=longUrl.toUpperCase();
+        int hashCode =num.hashCode();
         String key = Integer.toString(hashCode, 36);
         return key;
     }
